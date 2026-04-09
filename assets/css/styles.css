@@ -16,6 +16,7 @@ body {
 	color: whitesmoke;
 	font-size: 5rem;
 	overflow: hidden; 
+    
 	background: url("../img/galaxy-gif-30sec.gif");
 	background-repeat: no-repeat; 
 	background-position: center;
