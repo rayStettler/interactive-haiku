@@ -36,3 +36,9 @@ div {
 	transition-property: transform; 
 	transition-duration: 3s; 
 }
+
+.row {
+    display: flex;
+    gap: 10px; 
+    padding: 10px; 
+}
