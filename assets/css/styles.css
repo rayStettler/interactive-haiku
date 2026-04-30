@@ -1,8 +1,5 @@
 /* styles.css */
 
-
-/* styles.css */
-
 * {
 	font-family: Arial;
 }
@@ -44,7 +41,7 @@ html {
 }
 
 div {
-	/*text-shadow: 2px 2px 5px black; */ 
+	
 	transition-property: transform; 
 	transition-duration: 3s; 
 }
@@ -54,7 +51,5 @@ div {
     gap: 10px; 
     padding: 10px; 
 }
-
-
 
 

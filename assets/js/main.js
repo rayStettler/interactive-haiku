@@ -1,33 +1,51 @@
-// main.js
+// main js
 
 let grid = document.querySelectorAll(".grid-container"); 
 let divs = document.querySelectorAll(".grid-container div"); 
+//let divs = document.querySelection(".grid-container div"); 
 
-const colors = ["#5F0A87", "#7FD1B9", "#EF798A", "#F29E02", "#EDD83D"];
+let rotation = 0;
+document.addEventListener("click", function () {
+    // let min = 10; 
+    // let max = 40; 
+    rotation += randomNumber(1, 200); 
+    
+    document.body.style.transform = `rotate(${rotation}deg)`; 
+}) 
 
-function randomNumber(min, max){
-    return Math.floor(Math.random() * (max - min) + 1) + min; 
-}
-
+//let elements = document.querySelectorAll("body *"); 
+//console.log(elements.length); 
+//let divs = document.querySelection(".grid-container div"); 
+ 
 
 function randomize() {
-
-    grid[0].computedStyleMap.transform = `rotate(${Math.random() * 360}deg)`
-
+    
     divs.forEach(function(div) {
-        let scale = randomNumber(.2, 2);
-        let translateX = randomNumber (0, 50);
-        let translateY = randomNumber(0, 20);
-        let rotate = randomNumber(0, 360); 
-        div.style.transform = 
+        let scale = randomNumber(.5, 1.2);
+        let translateX = randomNumber(0, 50);
+        let translateY = randomNumber(0, 360);
+        let rotate = randomNumber(0, 360);
 
+        if(Math.random() > .5) {
+            scale = 1; 
+            translateX = randomNumber(0, 80);
+            translateY = randomNumber(0, 80); 
+        }
+
+        div.style.transform = 
             `scale(${scale})
             translate(${translateX}%, ${translateY}%)
-            rotate(${rotate}deg)`
-            
-    })
+            rotate(${rotate}deg)`; 
 
-    consolue.log(divs.length, "randomize!"); 
+        
+    }); 
+
+    console.log(divs.length, "randomize! "); 
+ 
+} 
+
+document.addEventListener("click", randomize);
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + 1) + min; 
 }
-
-document.addEventListener("click", randomize); 
